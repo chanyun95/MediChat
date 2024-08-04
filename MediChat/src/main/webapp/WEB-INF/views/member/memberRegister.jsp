@@ -15,9 +15,9 @@
 	<form:form action="registerUser" id="member_register" modelAttribute="memberVO">
 		<div class="form-main">
 		<ul>
-			<li style="margin-top:20px;">
+			<li style="margin-top:40px;">
 				    <form:label path="mem_id">아이디</form:label>
-				    <form:input path="mem_id" placeholder="영문or숫자사용하여 4~12자 입력" autocomplete="off" class="effect-1" style="width:290px;"/>
+				    <form:input path="mem_id" placeholder="영문or숫자사용하여 4~12자 입력" autocomplete="off" class="effect-1" style="width:690px;"/>
 				    <input type="button" id="confirmId" value="중복확인" class="default-btn" style="margin-left: 10px; background-color:#40916C;">
 				    <form:errors path="mem_id" cssClass="error-color" style="display:inline;"/><br>
 				    <span id="message_id"></span>
@@ -34,7 +34,7 @@
 				</li>
 				<li>
 				    <form:label path="mem_birth">생년월일</form:label>
-				    <input type="text" name="mem_birth" id="mem_birth" placeholder="년-월-일" class="effect-1">
+				    <input type="text" name="mem_birth" id="mem_birth" placeholder="년-월-일" class="effect-1" style="width:300px">
 				    <button type="button" id="calendarButton">
 				        <img src="${pageContext.request.contextPath}/images/calendar.jpg" style="width:30px; height:30px; margin-right:5px;">
 				    </button>
@@ -52,27 +52,25 @@
 				</li>
 				<li>
 				    <form:label path="mem_zipcode">주소</form:label>
-				    <form:input path="mem_zipcode" class="effect-1"/>
+				    <form:input path="mem_zipcode" class="effect-1" placeholder="우편번호"/>
 				    <input type="button" onclick="execDaumPostcode()" value="우편번호" class="default-btn" style="margin:0 2px; background-color:#40916C;">
-				    <form:input path="mem_address1" class="effect-1"/>
+				    <form:input path="mem_address1" class="effect-1" placeholder="주소" style="margin-left:15px; width:600px;"/>
 				    <br>
 				    <form:errors path="mem_zipcode" cssClass="error-color" style="margin-left:200px;"/>
 				    <form:errors path="mem_address1" cssClass="error-color" style="margin-left:110px;"/>
 				</li>
 				<li>
-				    <form:label path="mem_address2">상세주소</form:label>
-				    <form:input path="mem_address2" class="effect-1"/>
+				    <form:input path="mem_address2" class="effect-1" placeholder="상세주소" style="margin-left:90px;"/>
 				    <form:errors path="mem_address2" cssClass="error-color"/>
 				</li>
 			</ul>
 		</div>
 		<br>
-		<hr size="1" width="100%" noshade="noshade">
 		<!-- 캡챠 시작 -->
 		<div class="captcha">
 		<ul>
 			<li>
-				<span style="font-weight:bold;">인증문자 입력</span>
+				<span style="font-weight:bold;">보안 문자</span>
 				<div id="captcha_div">
 					<img src="getCaptcha" id="captcha_img" width="200" height="90">
 					<button type="button" class="btn" id="reload_captcha">
@@ -81,16 +79,16 @@
 				</div>
 			</li>
 			<li>
-				<form:label path="captcha_chars" >인증문자 확인</form:label>
-				<form:input path="captcha_chars" placeholder="인증문자를 입력하세요." class="effect-1"/>
+				<form:input path="captcha_chars" placeholder="보안 문자 입력" class="effect-1" style="margin-left:90px;"/>
 				<form:errors path="captcha_chars" cssClass="error-color"/>
 			</li>
 		</ul>
 		</div>
 		<!-- 캡챠 끝 -->
-		<hr size="1" width="100%" noshade="noshade">
+		<div style="text-align:left;">
+			<input type="button" value="취소" id="reload_btn" onclick="location.href='${pageContext.request.contextPath}/main/main'">		
+		</div>
 		<div style="text-align:right;">
-			<input type="button" value="홈으로" id="reload_btn" onclick="location.href='${pageContext.request.contextPath}/main/main'">
 			<form:button class="default-btn fw-7 fs-17">가입완료</form:button>
 		</div>
 	</form:form>

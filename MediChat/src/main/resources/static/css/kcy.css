@@ -4,9 +4,9 @@ body{
 	font-family: Pretendard-Regular;
 }
 div.container {
-    width: 800px;
-    margin: 0 auto 100px auto;
-    padding: 15px;
+    width: 1300px;
+    margin:0 0 100px 150px;
+    padding: 20px 50px;
     position: relative;
     top: 60px;
     background-color:rgb(251, 250, 250);
@@ -106,11 +106,9 @@ li{
 #member_register label,#doctor_register label,
 #member_modify label,#doctor_modify label{
     display:inline-block;
-    width:120px;
+    width:80px;
     font-weight:bold;
     margin-right:10px;
-    margin-left:70px;
-    text-align:right;
 }
 #member_changePasswd label,#member_delete label,
 #doctor_changePasswd label,#doctor_delete label{
@@ -124,7 +122,7 @@ li{
 input[type="text"],
 input[type="password"],
 input[type="email"]{
-    width: 400px;
+    width: 800px;
     padding:7px 5px;
     border:0;
     color: #333;
@@ -135,7 +133,7 @@ input[type="email"]{
     background-color:rgb(251, 250, 250);
 }
 input.effect-1 {
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid gray;
     position: relative;
 }
 input[type="text"]:focus,
@@ -144,7 +142,7 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 .effect-1:focus {
     outline: none;
-    border-bottom: 2px solid rgb(112, 178, 178); /* 포커스 시 하단 선 색상 변경 */
+    border-bottom: 1px solid #000; /* 포커스 시 하단 선 색상 변경 */
     transition: border-bottom 0.2s ease-in-out;
 }
 #member_register .default-btn,#doctor_register .default-btn,
@@ -188,14 +186,14 @@ input[type="tel"]:focus,
     font-size: 12px;
 }
 input[id="mem_zipcode"] {
-    width:100px;
+    width:200px;
 }
 input[id="mem_address1"]{
 	width:220px;
 	margin-top:10px;
 }
 input#mem_zipcode {
-    width:75px;
+    width:100px;
 }
 #mem_birth {
     width: 360px;
@@ -248,8 +246,8 @@ input#mem_zipcode {
 	color: white;
 }
 #captcha_div{
-	margin:10px 0 20px 0;
-	text-align:center;
+	margin:20px 0 0 90px;
+	text-align:left;
 }
 #reload_captcha.btn{
 	background-color:#9c9c9c;
