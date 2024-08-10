@@ -19,8 +19,17 @@
     transform: translateY(-50%);
     pointer-events: none;
 }
+.button-register {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.button-register input,
+.button-register .default-btn {
+    margin: 0;
+}  
 </style>
-<div class="container">
+<div class="container" style="width:900px; margin-left:400px;">
 	<h2 class="title">회원가입(의사)</h2>
 	<hr size="1" width="100%" noshade="noshade">
 	<span style="font-weight:bold;">정보입력</span>
@@ -29,10 +38,10 @@
 	<form:form action="registerDoc" id="doctor_register" enctype="multipart/form-data" modelAttribute="doctorVO">
 		<div class="form-main">
 		<ul>
-			<li style="margin-top:20px;">
+			<li style="margin-top:40px;">
 				<form:label path="mem_id">아이디</form:label>
-				<form:input path="mem_id" placeholder="영문or숫자 사용하여 4~12자 입력" autocomplete="off" class="effect-1" style="width:300px;"/>
-				<input type="button" id="confirmId" value="중복확인" class="default-btn" style="margin-left:0px; background-color:#40916C;">
+				<form:input path="mem_id" placeholder="영문or숫자 사용하여 4~12자 입력" autocomplete="off" class="effect-1" style="width:660px;"/>
+				<input type="button" id="confirmId" value="중복확인" class="default-btn" style="margin-left:10px; background-color:#40916C;">
 				<form:errors path="mem_id" cssClass="error-color" style="display:inline;"/><br>
 				<span id="message_id" style=""></span>
 			</li>
@@ -61,8 +70,8 @@
 			    </button>
 			    <form:errors path="hos_num" cssClass="error-color"/>
 			</li>
-			<li style="margin-left:205px;">
-			    <form:select path="hos_num" class="custom-select" style="width:400px;">
+			<li style="margin-left:95px;">
+			    <form:select path="hos_num" class="custom-select" style="width:660px;">
 			        <c:forEach var="hos" items="${hosList}">
 			            <option value="${hos.hos_num}">${hos.hos_name}/${hos.hos_addr}</option>
 			        </c:forEach>
@@ -70,12 +79,10 @@
 			</li>
 			<li>
 				<form:label path="doc_history">연혁</form:label>
-				<form:textarea path="doc_history" placeholder="연혁을 입력해주세요." class="msg" style="height:150px; vertical-align:top;"/>
+				<form:textarea path="doc_history" placeholder="연혁을 입력해주세요." class="msg" style="height:250px; vertical-align:top;"/>
 			</li>
 		</ul>
 		</div>
-		<br>
-		<hr size="1" width="100%" noshade="noshade">
 		<div class="upload-form">
 		<ul>
 			<li>
@@ -86,11 +93,10 @@
 		</ul>
 		</div>
 		<!-- 캡챠 시작 -->
-		<hr size="1" width="100%" noshade="noshade">
 		<div class="captcha">
 		<ul>
 			<li>
-				<span style="font-weight:bold;">인증문자 입력</span>
+				<span style="font-weight:bold;">보안 문자</span>
 				<div id="captcha_div">
 					<img src="getCaptcha" id="captcha_img" width="200" height="90">
 					<button type="button" class="btn" id="reload_captcha">
@@ -99,17 +105,15 @@
 				</div>
 			</li>
 			<li>
-				<form:label path="captcha_chars" >인증문자 확인</form:label>
-				<form:input path="captcha_chars" placeholder="인증문자를 입력하세요." class="effect-1"/>
+				<form:input path="captcha_chars" placeholder="보안 문자 입력" class="effect-1"  style="margin-left:90px;"/>
 				<form:errors path="captcha_chars" cssClass="error-color"/>
 			</li>
 		</ul>
 		</div>
 		<!-- 캡챠 끝 -->
-		<hr size="1" width="100%" noshade="noshade">
-		<div style="text-align:right;">
-			<input type="button" value="홈으로" id="reload_btn" onclick="location.href='${pageContext.request.contextPath}/main/main'">
-			<form:button class="default-btn">가입신청</form:button>
+		<div class="button-register">
+			<input type="button" value="취소" id="reload_btn" onclick="location.href='${pageContext.request.contextPath}/main/main'">		
+			<form:button class="default-btn fw-7 fs-17">가입완료</form:button>
 		</div>
 	</form:form>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-3.7.1.min.js"></script>

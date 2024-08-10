@@ -17,7 +17,7 @@
 	<div id="main_header">
 		<tiles:insertAttribute name="header"/>
 	</div>
-	<div class="custom-container">
+	<div class="custom-container2" style="background-color:rgb(245,245,245)">
 		<div id="main_body">
 			<tiles:insertAttribute name="body"/>
 		</div>

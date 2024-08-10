@@ -6,7 +6,18 @@
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.3/dist/sweetalert2.all.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.3/dist/sweetalert2.min.css" rel="stylesheet">
-<div class="container">
+<style>
+.button-register {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.button-register input,
+.button-register .default-btn {
+    margin: 0;
+}  
+</style>
+<div class="container" style="width:900px; margin-left:400px;">
 	<h2 class="title">회원가입</h2>
 	<hr size="1" width="100%" noshade="noshade">
 	<span style="font-weight:bold;">정보입력</span>
@@ -17,7 +28,7 @@
 		<ul>
 			<li style="margin-top:40px;">
 				    <form:label path="mem_id">아이디</form:label>
-				    <form:input path="mem_id" placeholder="영문or숫자사용하여 4~12자 입력" autocomplete="off" class="effect-1" style="width:690px;"/>
+				    <form:input path="mem_id" placeholder="영문or숫자사용하여 4~12자 입력" autocomplete="off" class="effect-1" style="width:660px;"/>
 				    <input type="button" id="confirmId" value="중복확인" class="default-btn" style="margin-left: 10px; background-color:#40916C;">
 				    <form:errors path="mem_id" cssClass="error-color" style="display:inline;"/><br>
 				    <span id="message_id"></span>
@@ -35,8 +46,8 @@
 				<li>
 				    <form:label path="mem_birth">생년월일</form:label>
 				    <input type="text" name="mem_birth" id="mem_birth" placeholder="년-월-일" class="effect-1" style="width:300px">
-				    <button type="button" id="calendarButton">
-				        <img src="${pageContext.request.contextPath}/images/calendar.jpg" style="width:30px; height:30px; margin-right:5px;">
+				    <button type="button" id="calendarButton" class="calendar-button">
+				         <i class="bi bi-calendar4"></i>
 				    </button>
 				    <form:errors path="mem_birth" cssClass="error-color" style="margin-left:5px;"/>
 				</li>
@@ -54,13 +65,14 @@
 				    <form:label path="mem_zipcode">주소</form:label>
 				    <form:input path="mem_zipcode" class="effect-1" placeholder="우편번호"/>
 				    <input type="button" onclick="execDaumPostcode()" value="우편번호" class="default-btn" style="margin:0 2px; background-color:#40916C;">
-				    <form:input path="mem_address1" class="effect-1" placeholder="주소" style="margin-left:15px; width:600px;"/>
+				    <form:input path="mem_address1" class="effect-1" placeholder="주소" style="margin-left:10px; width:450px;"/>
 				    <br>
 				    <form:errors path="mem_zipcode" cssClass="error-color" style="margin-left:200px;"/>
 				    <form:errors path="mem_address1" cssClass="error-color" style="margin-left:110px;"/>
 				</li>
 				<li>
-				    <form:input path="mem_address2" class="effect-1" placeholder="상세주소" style="margin-left:90px;"/>
+					<form:label path="mem_zipcode">상세주소</form:label>
+				    <form:input path="mem_address2" class="effect-1" placeholder="상세주소"/>
 				    <form:errors path="mem_address2" cssClass="error-color"/>
 				</li>
 			</ul>
@@ -85,10 +97,8 @@
 		</ul>
 		</div>
 		<!-- 캡챠 끝 -->
-		<div style="text-align:left;">
+		<div class="button-register">
 			<input type="button" value="취소" id="reload_btn" onclick="location.href='${pageContext.request.contextPath}/main/main'">		
-		</div>
-		<div style="text-align:right;">
 			<form:button class="default-btn fw-7 fs-17">가입완료</form:button>
 		</div>
 	</form:form>

@@ -11,17 +11,22 @@
 		<put-attribute name="header" value="/WEB-INF/views/template/header.jsp"/>
 		<put-attribute name="footer" value="/WEB-INF/views/template/footer.jsp"/>
 	</definition>
-
+	<definition name="kcy2" template="/WEB-INF/views/template/layout_register.jsp">
+		<put-attribute name="css" value="/WEB-INF/views/common/css.jsp"/>
+		<put-attribute name="bootstrap" value="/WEB-INF/views/common/bootStrap.jsp"/>
+		<put-attribute name="header" value="/WEB-INF/views/template/header.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/views/template/footer.jsp"/>
+	</definition>
 	<!-- 일반회원 -->
-	<definition name="memberRegister" extends="kcy">
+	<definition name="memberRegister" extends="kcy2">
 		<put-attribute name="title" value="회원가입"/>
 		<put-attribute name="body" value="/WEB-INF/views/member/memberRegister.jsp"/>
 	</definition>
-	<definition name="registerKakao" extends="kcy">
+	<definition name="registerKakao" extends="kcy2">
 		<put-attribute name="title" value="카카오회원가입"/>
 		<put-attribute name="body" value="/WEB-INF/views/member/kakaoRegister.jsp"/>
 	</definition>
-	<definition name="registerNaver" extends="kcy">
+	<definition name="registerNaver" extends="kcy2">
 		<put-attribute name="title" value="네이버회원가입"/>
 		<put-attribute name="body" value="/WEB-INF/views/member/naverRegister.jsp"/>
 	</definition>
@@ -47,7 +52,7 @@
 	</definition>
 	
 	<!-- 의사회원 -->
-	<definition name="doctorRegister" extends="kcy">
+	<definition name="doctorRegister" extends="kcy2">
 		<put-attribute name="title" value="회원가입(의사)"/>
 		<put-attribute name="body" value="/WEB-INF/views/doctor/doctorRegister.jsp"/>
 	</definition>

@@ -20,6 +20,9 @@
 #dictionary_menu_div:hover{
     display: block;
 }
+.header-menu-text:hover {
+	color:#727372 !important;
+}
 .header-status-leftBox, .header-status-rightBox, .header-status-rightBox {
     position: relative;
     padding-bottom: 15px; /* 부모 요소의 영역을 늘려서 마우스 이동 시 hover 상태를 유지 */
