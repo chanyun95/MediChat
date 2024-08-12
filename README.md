@@ -66,5 +66,5 @@
 <br><br>
 
 ## UI 및 기능(발표 자료)
-[MediChat.pdf](https://github.com/chanyun95/MediChat/blob/main/MediChat.pdf)
+[MediChat.pdf](https://github.com/chanyun95/MediChat/raw/main/MediChat.pdf)
 
