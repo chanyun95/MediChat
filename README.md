@@ -2,9 +2,7 @@
 <img src="https://github.com/chanyun95/MediChat/blob/main/MediChat/src/main/resources/static/images/logo.png?raw=true" width="660px" height="210px">
 
 # 팀원
-|      김찬윤       |          김승연         |       윤찬호         
-|      김유진       |          송효기         |       원혜리         
-|      손소희       |
+|      김찬윤       |          김승연         |       윤찬호         |      김유진       |          송효기         |       원혜리         |      손소희       |
 
 <br><br>
 
@@ -68,6 +66,5 @@
 <br><br>
 
 ## UI 및 기능(발표 자료)
+[MediChat.pdf](https://github.com/chanyun95/MediChat/blob/main/MediChat.pdf)
 
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=footer" />
