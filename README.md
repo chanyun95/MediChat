@@ -39,7 +39,7 @@
 >## Back-end
  >> Java17
 > >
- >> Springboot2.7
+ >> Springboot 2.7
 > >
  >> MyBatis
 > >
